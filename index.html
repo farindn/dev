@@ -4,31 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Directory</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded" />
-</head>
+    <link rel="stylesheet" href="styles.css"> </head>
 <body>
 
     <main class="dashboard">
 
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
-            <h2 class="section-title">Staff Directory</h2>
-            
-            <div style="display: flex; gap: 12px; align-items: center; flex-grow: 1; justify-content: flex-end;">
-                <div class="search-bar" style="max-width: 300px; width: 100%;">
-                    <div class="input-group" style="margin-bottom: 0;">
-                        <div class="input-field">
-                            <span class="material-symbols-rounded" style="position: absolute; left: 10px; top: 10px; color: #607690;">search</span>
-                            <input type="text" placeholder="Search staff..." style="padding-left: 36px;">
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn-primary" style="width: auto; padding: 0 24px;">
-                    <span class="material-symbols-rounded">add</span>
-                    Add New Staff
-                </button>
+        <div class="search-bar">
+            <div class="search-input-container">
+                <span class="material-symbols-rounded search-icon">search</span>
+                <input type="text" placeholder="Search...">
             </div>
+            <button class="btn-primary" style="width: auto; margin-bottom:0;">
+                <span class="material-symbols-rounded">add</span> Add Staff
+            </button>
         </div>
 
         <div class="dashboard-table">
@@ -36,92 +24,83 @@
                 <table>
                     <thead>
                         <tr>
-                            <th class="sortable">Employee Name</th>
+                            <th class="status-col">
+                                <span class="material-symbols-rounded">check_box_outline_blank</span>
+                            </th>
+                            
+                            <th class="sortable">
+                                Employee Name <span class="sort-icon">▼</span>
+                            </th>
+                            
                             <th>Role</th>
+                            
                             <th>Department</th>
-                            <th class="status-col">Status</th>
+                            
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
+                        
                         <tr>
+                            <td class="status-col">
+                                <span class="material-symbols-rounded" style="color: #cbd3dc;">check_box_outline_blank</span>
+                            </td>
+                            
                             <td>
                                 <span class="desktop-text">Sarah Jenkins</span>
 
                                 <div class="mobile-view">
                                     <div class="mobile-title">Sarah Jenkins</div>
-                                    <div class="mobile-subtitle">ID: #EMP-8922</div>
+                                    <div class="mobile-subtitle">#EMP-8922 • Senior Developer</div>
                                     <div class="mobile-meta">
                                         <span class="material-symbols-rounded">calendar_today</span>
-                                        Hired: Oct 24, 2023
+                                        Oct 24, 2023
+                                    </div>
+                                    <div style="margin-top: 8px;">
+                                        <button class="btn-action">Edit</button>
                                     </div>
                                 </div>
                             </td>
                             
                             <td>Senior Developer</td>
-                            <td>Engineering</td>
                             
-                            <td class="status-col">
-                                <span class="update-fresh">Active</span>
+                            <td>
+                                <span class="code-block">Engineering</span>
                             </td>
                             
                             <td>
                                 <button class="btn-action">
-                                    <span class="material-symbols-rounded">edit</span>
+                                    <span class="material-symbols-rounded">edit</span> Edit
                                 </button>
                             </td>
                         </tr>
 
                         <tr>
+                            <td class="status-col">
+                                <span class="material-symbols-rounded" style="color: #cbd3dc;">check_box_outline_blank</span>
+                            </td>
+                            
                             <td>
                                 <span class="desktop-text">Marcus Thorne</span>
                                 <div class="mobile-view">
                                     <div class="mobile-title">Marcus Thorne</div>
-                                    <div class="mobile-subtitle">ID: #EMP-8940</div>
+                                    <div class="mobile-subtitle">#EMP-8940 • Product Manager</div>
                                     <div class="mobile-meta">
                                         <span class="material-symbols-rounded">calendar_today</span>
-                                        Hired: Jan 05, 2024
+                                        Jan 05, 2024
+                                    </div>
+                                    <div style="margin-top: 8px;">
+                                        <button class="btn-action">Edit</button>
                                     </div>
                                 </div>
                             </td>
                             
                             <td>Product Manager</td>
-                            <td>Product</td>
-                            
-                            <td class="status-col">
-                                <span class="update-fresh">Active</span>
-                            </td>
+                            <td><span class="code-block">Product</span></td>
                             
                             <td>
                                 <button class="btn-action">
-                                    <span class="material-symbols-rounded">edit</span>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <span class="desktop-text">Elena Rodriquez</span>
-                                <div class="mobile-view">
-                                    <div class="mobile-title">Elena Rodriquez</div>
-                                    <div class="mobile-subtitle">ID: #EMP-8105</div>
-                                    <div class="mobile-meta">
-                                        <span class="material-symbols-rounded">calendar_today</span>
-                                        Hired: Nov 12, 2022
-                                    </div>
-                                </div>
-                            </td>
-                            
-                            <td>UX Designer</td>
-                            <td>Design</td>
-                            
-                            <td class="status-col">
-                                <span class="update-stale">On Leave</span>
-                            </td>
-                            
-                            <td>
-                                <button class="btn-action">
-                                    <span class="material-symbols-rounded">edit</span>
+                                    <span class="material-symbols-rounded">edit</span> Edit
                                 </button>
                             </td>
                         </tr>
@@ -129,8 +108,14 @@
                     </tbody>
                 </table>
             </div>
+            
+            <div class="pagination">
+                <button disabled>Previous</button>
+                <button>Next</button>
+            </div>
         </div>
 
     </main>
+
 </body>
 </html>
