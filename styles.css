@@ -8,12 +8,17 @@
 🎨 COLOR PALETTE & GLOBAL VARIABLES
 --------------------------------------------------------- */
 :root {
-  --color-primary: #25457B;
-  --color-accent: #00B8FF;
-  --color-slate: #607690;
+  /* Deep Indigo: Trustworthy but modern */
+  --color-primary: #4338CA; 
+  /* Teal/Cyan: High energy, refreshing contrast */
+  --color-accent: #2DD4BF; 
+  /* Cool Grey: Clean and crisp text color */
+  --color-slate: #64748B; 
   --color-white: #FFFFFF;
-  --color-error: #FE4A3F;
-  --color-success: #13AA09;
+  /* Slightly softer error red */
+  --color-error: #EF4444; 
+  /* Emerald green for success */
+  --color-success: #10B981; 
   --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
